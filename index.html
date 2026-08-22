@@ -486,15 +486,15 @@
 <header>
   <a href="#" class="nav-logo">FieldVision<span class="dot">.</span></a>
   <div class="nav-capsule">
-    <!-- Seletor de Idiomas MultilÃ­ngue (PT, EN, ES, FR, DE) -->
+    <!-- Seletor de Idiomas Ordenado por mais falados (EN | ES | FR | PT | DE) -->
     <div class="nav-lang">
-      <a onclick="setLang('pt')" id="lang-pt">PT</a>
-      <span>|</span>
       <a onclick="setLang('en')" id="lang-en">EN</a>
       <span>|</span>
       <a onclick="setLang('es')" id="lang-es">ES</a>
       <span>|</span>
       <a onclick="setLang('fr')" id="lang-fr">FR</a>
+      <span>|</span>
+      <a onclick="setLang('pt')" id="lang-pt">PT</a>
       <span>|</span>
       <a onclick="setLang('de')" id="lang-de">DE</a>
     </div>
@@ -640,7 +640,7 @@
 </footer>
 
 <script>
-  // â”€â”€ PREVENIR SCROLL SCROLL PERSISTENCE NO REFRESH (FORÃ‡AR INÃCIO NO TOPO) â”€â”€
+  // â”€â”€ PREVENIR PERSISTÃŠNCIA DE SCROLL NO REFRESH (FORÃ‡AR INÃCIO NO TOPO) â”€â”€
   if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
   }
@@ -727,7 +727,7 @@
       "faq-q2": "Preciso de liga&ccedil;&atilde;o &agrave; internet para usar o FieldVision?<span class=\"arrow\">+</span>",
       "faq-a2": "N&atilde;o. O FieldVision &eacute; 100% offline. Os seus v&iacute;deos e anota&ccedil;&otilde;es nunca saem do computador. A internet s&oacute; &eacute; necess&aacute;ria para validar a chave Pro.",
       "faq-q3": "Quais s&atilde;o os formatos de v&iacute;deo suportados?<span class=\"arrow\">+</span>",
-      "faq-a3": "Suporta MP4, MKV, AVI, MOV, WMV, FLV, WebM, M4V, MPEG, MPG, 3GP, TS e muitos outros.",
+      "faq-a3": "Suporta MP4, MKV, AVI, MOV, WMV, FLV, WebM, M4V, MPEG, MPG, 3GP, TS and many others.",
       "faq-q4": "Como funciona o rastreio autom&aacute;tico de jogadores?<span class=\"arrow\">+</span>",
       "faq-a4": "Basta selecionar um jogador desenhando uma caixa &agrave; volta dele. O rastreador de IA segue o jogador frame a frame e desenha o rasto no v&iacute;deo final.",
       "faq-q5": "Posso experimentar antes de comprar?<span class=\"arrow\">+</span>",
@@ -822,7 +822,7 @@
       "faq-q5": "Can I try FieldVision before buying?<span class=\"arrow\">+</span>",
       "faq-a5": "Yes! The Free version is available forever with no credit card required. You even get 5 AI tracking trials to test the power of the tracker before committing to Pro.",
       "faq-q6": "What happens when my annual subscription renews?<span class=\"arrow\">+</span>",
-      "faq-a6": "Open an email reminder before your subscription renews. You can cancel at any time and continue using Pro until the end of your billing period.",
+      "faq-a6": "You will receive an email reminder before your subscription renews. You can cancel at any time and continue using Pro until the end of your billing period.",
       "cta-title": "Ready to see the game differently?",
       "cta-desc": "Join coaches and analysts who use FieldVision to get the edge. Start free today &mdash; no credit card needed.",
       "btn-cta-dl": "&#11015; Download Free for Windows",
@@ -850,7 +850,7 @@
       "feat-title": "Todo lo que un entrenador necesita.",
       "feat-sub": "Desde la base hasta el profesional. FieldVision te da las herramientas para analizar, anotar y comunicar t&aacute;ticas como un profesional.",
       "feat-track-t": "Rastreo Autom&aacute;tico de Jugadores",
-      "feat-track-d": "Selecciona cualquier jogador y el rastreador de IA de FieldVision lo seguir&aacute; autom&aacute;ticamente en el clip &mdash; sin edici&oacute;n manual frame a frame.",
+      "feat-track-d": "Selecciona cualquier jugador y el rastreador de IA de FieldVision lo seguir&aacute; autom&aacute;ticamente en el clip &mdash; sin edici&oacute;n manual frame a frame.",
       "feat-ann-t": "Anotaciones T&aacute;ticas",
       "feat-ann-d": "Dibuja l&iacute;neas, flechas, formas y zonas directamente sobre el v&iacute;deo. Destaca movimentos, presiones, jugadas a bal&oacute;n parado y m&aacute;s.",
       "feat-export-t": "Exportaci&oacute;n Inteligente de Clips",
@@ -867,7 +867,7 @@
       "step-1-t": "Descarga y abre",
       "step-1-d": "Descarga FieldVision gratis y ejecuta la aplica&ccedil;i&oacute;n en tu PC Windows en segundos. Sin necesidad de cuenta.",
       "step-2-t": "Carga tu v&iacute;deo",
-      "step-2-d": "Abre qualquer archivo de v&iacute;deo desde tu ordenador. Soporta los principales formatos &mdash; MP4, MKV, AVI, MOV y m&aacute;s.",
+      "step-2-d": "Abre cualquier archivo de v&iacute;deo desde tu ordenador. Soporta los principales formatos &mdash; MP4, MKV, AVI, MOV y m&aacute;s.",
       "step-3-t": "Anota y Rastrea",
       "step-3-d": "Pausa el v&iacute;deo, dibuja tus anotaciones t&aacute;cticas o selecciona un jugador para rastrearlo autom&aacute;ticamente con IA.",
       "step-4-t": "Exporta tu clipe",
@@ -907,7 +907,7 @@
       "faq-q3": "&iquest;QuÃ© formatos de v&iacute;deo son compatibles?<span class=\"arrow\">+</span>",
       "faq-a3": "Soporta MP4, MKV, AVI, MOV, WMV, FLV, WebM, M4V, MPEG, MPG, 3GP, TS y muchos otros.",
       "faq-q4": "&iquest;C&oacute;mo funciona el rastreo automÃ¡tico de jugadores?<span class=\"arrow\">+</span>",
-      "faq-a4": "Basta con seleccionar un jugador dibujando una caja a su alrededor. El rastreador de IA sigue al jugador frame a frame y dibuja el rastro en el v&iacute;deo final.",
+      "faq-a4": "Basta con seleccionar un jugador dibujando una caja a su alrededor. El rastreador de IA sigue al jugador frame a frame y dibuja el rastro en el vÃ­deo final.",
       "faq-q5": "&iquest;Puedo probar antes de comprar?<span class=\"arrow\">+</span>",
       "faq-a5": "&iexcl;S&iacute;! La versi&oacute;n Free es gratis para siempre. Tienes adem&aacute;s derecho a 5 usos de prueba del rastreador de IA para ver su potencial antes de comprar.",
       "faq-q6": "&iquest;QuÃ© pasa cuando se renueva mi suscripciÃ³n?<span class=\"arrow\">+</span>",
@@ -1103,6 +1103,7 @@
   // â”€â”€ MOTOR DE TRADUÃ‡ÃƒO DINÃ‚MICO â”€â”€
   let currentLang = 'pt';
 
+  // ForÃ§ar o carregamento padrÃ£o caso nÃ£o haja persistÃªncia
   function setLang(lang) {
     currentLang = lang;
     localStorage.setItem('fv_lang', lang);
