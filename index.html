@@ -486,7 +486,7 @@
 <header>
   <a href="#" class="nav-logo">FieldVision<span class="dot">.</span></a>
   <div class="nav-capsule">
-    <!-- Seletor de Idiomas MultilÃ­ngue (Inserido FR) -->
+    <!-- Seletor de Idiomas MultilÃ­ngue (PT, EN, ES, FR, DE) -->
     <div class="nav-lang">
       <a onclick="setLang('pt')" id="lang-pt">PT</a>
       <span>|</span>
@@ -495,6 +495,8 @@
       <a onclick="setLang('es')" id="lang-es">ES</a>
       <span>|</span>
       <a onclick="setLang('fr')" id="lang-fr">FR</a>
+      <span>|</span>
+      <a onclick="setLang('de')" id="lang-de">DE</a>
     </div>
     
     <a href="#pricing" class="nav-cta" id="nav-get-pro" data-i18n="nav-get-pro">Get Pro</a>
@@ -638,7 +640,7 @@
 </footer>
 
 <script>
-  // â”€â”€ PREVENIR PERSISTÃŠNCIA DE SCROLL NO REFRESH (FORÃ‡AR INÃCIO NO TOPO) â”€â”€
+  // â”€â”€ PREVENIR SCROLL SCROLL PERSISTENCE NO REFRESH (FORÃ‡AR INÃCIO NO TOPO) â”€â”€
   if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
   }
@@ -649,7 +651,7 @@
 
   function toggleFaq(el) { el.parentElement.classList.toggle('open'); }
 
-  // â”€â”€ DICIONÃRIO DE TRADUÃ‡ÃƒO MULTILÃNGUE (HTML ENTITIES: PT, EN, ES, FR) â”€â”€
+  // â”€â”€ DICIONÃRIO DE TRADUÃ‡ÃƒO MULTILÃNGUE (HTML ENTITIES: PT, EN, ES, FR, DE) â”€â”€
   const translations = {
     pt: {
       "nav-get-pro": "Obter Pro",
@@ -820,7 +822,7 @@
       "faq-q5": "Can I try FieldVision before buying?<span class=\"arrow\">+</span>",
       "faq-a5": "Yes! The Free version is available forever with no credit card required. You even get 5 AI tracking trials to test the power of the tracker before committing to Pro.",
       "faq-q6": "What happens when my annual subscription renews?<span class=\"arrow\">+</span>",
-      "faq-a6": "You will receive an email reminder before your subscription renews. You can cancel at any time and continue using Pro until the end of your billing period.",
+      "faq-a6": "Open an email reminder before your subscription renews. You can cancel at any time and continue using Pro until the end of your billing period.",
       "cta-title": "Ready to see the game differently?",
       "cta-desc": "Join coaches and analysts who use FieldVision to get the edge. Start free today &mdash; no credit card needed.",
       "btn-cta-dl": "&#11015; Download Free for Windows",
@@ -848,15 +850,15 @@
       "feat-title": "Todo lo que un entrenador necesita.",
       "feat-sub": "Desde la base hasta el profesional. FieldVision te da las herramientas para analizar, anotar y comunicar t&aacute;ticas como un profesional.",
       "feat-track-t": "Rastreo Autom&aacute;tico de Jugadores",
-      "feat-track-d": "Selecciona cualquier jugador y el rastreador de IA de FieldVision lo seguir&aacute; autom&aacute;ticamente en el clip &mdash; sin edici&oacute;n manual frame a frame.",
+      "feat-track-d": "Selecciona cualquier jogador y el rastreador de IA de FieldVision lo seguir&aacute; autom&aacute;ticamente en el clip &mdash; sin edici&oacute;n manual frame a frame.",
       "feat-ann-t": "Anotaciones T&aacute;ticas",
-      "feat-ann-d": "Dibuja l&iacute;neas, flechas, formas y zonas directamente sobre el v&iacute;deo. Destaca movimientos, presiones, jugadas a bal&oacute;n parado y m&aacute;s.",
+      "feat-ann-d": "Dibuja l&iacute;neas, flechas, formas y zonas directamente sobre el v&iacute;deo. Destaca movimentos, presiones, jugadas a bal&oacute;n parado y m&aacute;s.",
       "feat-export-t": "Exportaci&oacute;n Inteligente de Clips",
       "feat-export-d": "Corta y exporta clips con tus anotaciones grabadas. Comparte momentos con jugadores y cuerpo t&eacute;cnico en segundos &mdash; listo para WhatsApp, email o presentaciones.",
       "feat-save-t": "Guardar y Cargar Proyectos",
       "feat-save-d": "Guarda tus anotaciones por v&iacute;deo. Vuelve m&aacute;s tarde y contin&uacute;a exactamente donde lo dejaste. Todos los datos se guardan localmente en tu ordenador.",
       "feat-offline-t": "100% Offline y Privado",
-      "feat-offline-d": "Los v&iacute;deos de tus partidos nunca salen de tu ordenador. Sin cargas en la nube, sin suscripciones en servidores externos. Tus datos son tuyos.",
+      "feat-offline-d": "Los v&iacute;deos de tus partidos nunca salen de tu ordenador. Sin cargas en la nube, sin suscripciones en servidores externos. Tus datos son de tu propiedad.",
       "feat-perf-t": "Rendimiento Nativo de Escritorio",
       "feat-perf-d": "Desarrollado para rendimiento nativo en Windows. Soporta MP4, MKV, AVI, MOV y m&aacute;s. Sin lentitud del navegador, sin l&iacute;mites.",
       "how-label": "C&oacute;mo funciona",
@@ -865,7 +867,7 @@
       "step-1-t": "Descarga y abre",
       "step-1-d": "Descarga FieldVision gratis y ejecuta la aplica&ccedil;i&oacute;n en tu PC Windows en segundos. Sin necesidad de cuenta.",
       "step-2-t": "Carga tu v&iacute;deo",
-      "step-2-d": "Abre cualquier archivo de v&iacute;deo desde tu ordenador. Soporta los principales formatos &mdash; MP4, MKV, AVI, MOV y m&aacute;s.",
+      "step-2-d": "Abre qualquer archivo de v&iacute;deo desde tu ordenador. Soporta los principales formatos &mdash; MP4, MKV, AVI, MOV y m&aacute;s.",
       "step-3-t": "Anota y Rastrea",
       "step-3-d": "Pausa el v&iacute;deo, dibuja tus anotaciones t&aacute;cticas o selecciona un jugador para rastrearlo autom&aacute;ticamente con IA.",
       "step-4-t": "Exporta tu clipe",
@@ -926,7 +928,7 @@
       "cta-label": "ðŸ–¥ Application Windows &mdash; T&eacute;l&eacute;chargement gratuit",
       "hero-download": "&#11015; T&eacute;l&eacute;charger gratuit",
       "hero-get-pro": "&#x26A1; Obtenir Pro &mdash; &euro;29/an",
-      "hero-note": "Gratuit pour toujours &nbsp;&middot;&nbsp; Sans carte de cr&eacute;dito &nbsp;&middot;&nbsp; <strong>Windows 10 / 11</strong>",
+      "hero-note": "Gratuit pour toujours &nbsp;&middot;&nbsp; Sans carte de cr&eacute;dit &nbsp;&middot;&nbsp; <strong>Windows 10 / 11</strong>",
       "sports-football": "&#x26BD; Football",
       "sports-rugby": "&#x1F3C9; Rugby",
       "sports-hockey": "&#x1F3D1; Hockey sur gazon",
@@ -943,7 +945,7 @@
       "feat-export-t": "Exportation intelligente de clips",
       "feat-export-d": "Coupez et exportez vos clips avec vos annotations int&eacute;gr&eacute;es. Partagez des moments avec les joueurs et le staff en quelques secondes &mdash; pr&ecirc;t pour WhatsApp, email ou pr&eacute;sentations.",
       "feat-save-t": "Sauvegarder &amp; Charger des Projets",
-      "feat-save-d": "Sauvegardez vos annotations par vid&eacute;o. Revenez plus tard et reprenez exactement l&agrave; o&ugrave; vous vous &eacute;tiez arr&ecirc;t&eacute;. Toutes les donn&eacute;es sont stock&eacute;es localement sur votre machine.",
+      "feat-save-d": "Sauvegardez vos annotations par vid&eacute;o. Revenez mais tard et reprenez exactement l&agrave; o&ugrave; vous vous &eacute;tiez arr&ecirc;t&eacute;. Toutes les donn&eacute;es sont stock&eacute;es localement sur votre machine.",
       "feat-offline-t": "100% Hors ligne &amp; Priv&eacute;",
       "feat-offline-d": "Les images de vos matchs ne quittent jamais votre ordinateur. Pas de chargement sur le cloud, pas d'abonnement &agrave; des serveurs externes. Vos donn&eacute;es restent les v&ocirc;tres.",
       "feat-perf-t": "Performances natives sur bureau",
@@ -990,7 +992,7 @@
       "faq-q1": "Quels syst&egrave;mes d'exploitation FieldVision prend-il en charge?<span class=\"arrow\">+</span>",
       "faq-a1": "FieldVision fonctionne actuellement sous Windows 10 et 11. La prise en charge de macOS est pr&eacute;vue pour une future mise &agrave; jour.",
       "faq-q2": "Ai-je besoin d'une connexion Internet pour utiliser FieldVision?<span class=\"arrow\">+</span>",
-      "faq-a2": "Non. FieldVision est 100% hors ligne. Vos vid&eacute;os et annotations ne quittent jamais votre ordinateur. Une connexion Internet est uniquement requise pour activer votre licence Pro.",
+      "faq-a2": "Non. FieldVision is 100% hors ligne. Vos vid&eacute;os et annotations ne quittent jamais votre ordinateur. Une connexion Internet est uniquement requise pour activer votre licence Pro.",
       "faq-q3": "Quels formats vid&eacute;o sont pris en charge?<span class=\"arrow\">+</span>",
       "faq-a3": "FieldVision prend en charge les formats MP4, MKV, AVI, MOV, WMV, FLV, WebM, M4V, MPEG, MPG, 3GP, TS et plus encore.",
       "faq-q4": "Comment fonctionne le suivi automatique des joueurs?<span class=\"arrow\">+</span>",
@@ -1000,11 +1002,100 @@
       "faq-q6": "Que se passe-t-il lors du renouvellement de mon abonnement annuel?<span class=\"arrow\">+</span>",
       "faq-a6": "Vous recevrez un rappel par email avant le renouvellement de votre abonnement. Vous pouvez annuler &agrave; tout moment et continuer &agrave; utiliser Pro jusqu'&agrave; la fin de votre p&eacute;riode de facturation.",
       "cta-title": "Pr&ecirc;t &agrave; voir le jeu diff&eacute;remment?",
-      "cta-desc": "Rejoignez les entra&icirc;neurs et les analystes qui utilisent FieldVision pour prendre l'avantage. Commencez gratuitement d&egrave;s aujourd'hui &mdash; sans carte de cr&eacute;dit requise.",
+      "cta-desc": "Rejoignez les entra&icirc;neurs et les analystes qui utilisent FieldVision pour prendre l'avantage. Commencez gratuitement d&egrave;s aujourd'hui &mdash; sans carte de cr&eacute;dito requise.",
       "btn-cta-dl": "&#11015; T&eacute;l&eacute;charger gratuitement pour Windows",
       "btn-cta-pro": "&#x26A1; Obtenir Pro &mdash; &euro;29/an",
       "nav-features": "Fonctionnalit&eacute;s",
       "nav-pricing": "Tarifs",
+      "nav-faq": "FAQ"
+    },
+    de: {
+      "nav-get-pro": "Pro erhalten",
+      "hero-badge": "Jetzt f&uuml;r Windows verf&uuml;gbar",
+      "hero-title": "Analysieren Sie Ihr Team.<br/><span class=\"accent\">Gewinnen Sie auf dem Platz.</span>",
+      "hero-sub": "Professionelle Videoanalyse f&uuml;r Fu&szlig;ball, Rugby, Feldhockey und mehr. Taktiken annotieren, Spieler automatisch verfolgen und beeindruckende Clips exportieren &mdash; alles direkt auf Ihrem Desktop.",
+      "cta-label": "ðŸ–¥ Windows-App &mdash; Kostenlos herunterladen",
+      "hero-download": "&#11015; Kostenlos herunterladen",
+      "hero-get-pro": "&#x26A1; Pro erhalten &mdash; &euro;29/Jahr",
+      "hero-note": "F&uuml;r immer kostenlos &nbsp;&middot;&nbsp; Keine Kreditkarte erforderlich &nbsp;&middot;&nbsp; <strong>Windows 10 / 11</strong>",
+      "sports-football": "&#x26BD; Fu&szlig;ball",
+      "sports-rugby": "&#x1F3C9; Rugby",
+      "sports-hockey": "&#x1F3D1; Feldhockey",
+      "sports-cricket": "&#x1F3CF; Cricket",
+      "sports-lacrosse": "&#x1F94D; Lacrosse",
+      "sports-aussie": "&#x1F1E6;&#x1F1FA; Aussie Rules",
+      "feat-label": "Funktionen",
+      "feat-title": "Alles, was ein Trainer braucht.",
+      "feat-sub": "Vom Breitensport bis zum Profibereich. FieldVision bietet Ihnen die Werkzeuge, um Taktiken wie ein Profi zu analysieren, zu annotieren und zu vermitteln.",
+      "feat-track-t": "Automatische Spielerverfolgung",
+      "feat-track-d": "W&auml;hlen Sie einen beliebigen Spieler aus und der KI-Tracker von FieldVision folgt ihm automatisch durch den Clip &mdash; keine manuelle Bild-f&uuml;r-Bild-Arbeit erforderlich.",
+      "feat-ann-t": "Taktische Annotationen",
+      "feat-ann-d": "Zeichnen Sie Linien, Pfeile, Formen und Zonen direkt auf das Video. Heben Sie Laufwege, Pressingausl&ouml;ser, Standardsituationen und mehr hervor.",
+      "feat-export-t": "Intelligenter Clip-Export",
+      "feat-export-d": "Schneiden und exportieren Sie Clips mit Ihren integrierten Annotationen. Teilen Sie Spielszenen in Sekundenschnelle mit Spielern und Trainerstab &mdash; bereit f&uuml;r WhatsApp, E-Mail oder Pr&auml;sentationen.",
+      "feat-save-t": "Projekte speichern &amp; laden",
+      "feat-save-d": "Speichern Sie Ihre Annotationen pro Video. Kehren Sie sp&auml;ter zur&uuml;ck und machen Sie genau dort weiter, wo Sie aufg&ouml;rt haben. Alle Daten werden lokal auf Ihrem PC gespeichert.",
+      "feat-offline-t": "100% Offline &amp; Privat",
+      "feat-offline-d": "Ihr Videomaterial verl&auml;sst niemals Ihren Computer. Keine Cloud-Uploads, keine Abonnements auf externen Servern. Ihre Daten bleiben Ihre.",
+      "feat-perf-t": "Native Desktop-Performance",
+      "feat-perf-d": "Entwickelt f&uuml;r native Windows-Leistung. Unterst&uuml;tzt MP4, MKV, AVI, MOV und mehr. Keine Browser-Verz&ouml;gerung, keine Limits.",
+      "how-label": "So funktioniert es",
+      "how-title": "Vom Videomaterial zur Analyse in wenigen Minuten.",
+      "how-sub": "FieldVision ist so konzipiert, dass es Ihnen nicht im Weg steht und Sie sich ganz auf die Taktik konzentrieren k&ouml;nnen.",
+      "step-1-t": "Herunterladen &amp; &Ouml;ffnen",
+      "step-1-d": "Laden Sie FieldVision kostenlos herunter und starten Sie die App in Sekundenschnelle auf Ihrem Windows-PC. Kein Konto erforderlich.",
+      "step-2-t": "Video laden",
+      "step-2-d": "&Ouml;ffnen Sie eine beliebige Videodatei von Ihrem Computer. Unterst&uuml;tzt alle g&auml;ngigen Formate &mdash; MP4, MKV, AVI, MOV und mehr.",
+      "step-3-t": "Annotieren &amp; Verfolgen",
+      "step-3-d": "Pausieren Sie das Video, zeichnen Sie Ihre taktischen Annotationen oder w&auml;hlen Sie einen Spieler aus, dem die KI automatisch folgen soll.",
+      "step-4-t": "Clip exportieren",
+      "step-4-d": "Schneiden Sie die gew&uuml;nschte Szene zu, exportieren Sie sie mit integrierten Annotationen. Bereit, sofort mit Ihrem Team geteilt zu werden.",
+      "price-label": "Preise",
+      "price-title": "Einfache, ehrliche Preise.",
+      "price-sub": "Testen Sie FieldVision kostenlos. F&uuml;hren Sie ein Upgrade durch, wenn Sie bereit sind, die volle Power professioneller Analysen freizuschalten.",
+      "price-free-t": "Kostenlos",
+      "price-free-p": " / f&uuml;r immer",
+      "price-free-d": "Perfekt, um einzusteigen und die Grundlagen zu erkunden.",
+      "p-free-1": "Jedes beliebige Video laden &amp; abspielen",
+      "p-free-2": "Bis zu 3 Annotationen pro Video",
+      "p-free-3": "Bis zu 3 Clip-Exporte pro Monat",
+      "p-free-4": "KI-Spielerverfolgung testen (5 Nutzungen)",
+      "p-free-5": "Wasserzeichenfreier Export",
+      "p-free-6": "Unbegrenzte Annotationen &amp; Exporte",
+      "p-free-7": "Priorit&auml;rer Support",
+      "btn-dl-free": "&#11015; Kostenlos herunterladen",
+      "price-pro-t": "Pro",
+      "price-pro-p": " / Jahr",
+      "price-pro-d": "Alles, was Sie f&uuml;r ernsthafte Taktikanalysen ben&ouml;tigen. Das sind nur &euro;2.40/Monat.",
+      "p-pro-1": "Alles aus der kostenlosen Version",
+      "p-pro-2": "Unbegrenzte Annotationen",
+      "p-pro-3": "Unbegrenzte Clip-Exporte",
+      "p-pro-4": "Unbegrenzt gespeicherte Projekte",
+      "p-pro-5": "Automatische KI-Spielerverfolgung",
+      "p-pro-6": "Export ohne Wasserzeichen",
+      "p-pro-7": "Alle zuk&uuml;nftigen Updates enthalten",
+      "p-pro-8": "Priorit&auml;rer E-Mail-Support",
+      "btn-get-pro": "Pro erhalten &mdash; &euro;29/Jahr",
+      "faq-label": "FAQ",
+      "faq-title": "Fragen beantwortet.",
+      "faq-q1": "Welche Betriebssysteme unterst&uuml;tzt FieldVision?<span class=\"arrow\">+</span>",
+      "faq-a1": "FieldVision l&auml;uft derzeit unter Windows 10 und 11. macOS-Unterst&uuml;tzung ist f&uuml;r ein zuk&uuml;nftiges Update geplant.",
+      "faq-q2": "Ben&ouml;tige ich eine Internetverbindung, um FieldVision zu nutzen?<span class=\"arrow\">+</span>",
+      "faq-a2": "Nein. FieldVision ist zu 100% offline. Ihre Videos und Annotationen verlassen niemals Ihren Computer. Eine Internetverbindung wird nur zur Aktivierung Ihrer Pro-Lizenz ben&ouml;tigt.",
+      "faq-q3": "Welche Videoformate werden unterst&uuml;tzt?<span class=\"arrow\">+</span>",
+      "faq-a3": "FieldVision unterst&uuml;tzt MP4, MKV, AVI, MOV, WMV, FLV, WebM, M4V, MPEG, MPG, 3GP, TS und mehr.",
+      "faq-q4": "Wie funktioniert die automatische Spielerverfolgung?<span class=\"arrow\">+</span>",
+      "faq-a4": "W&auml;hlen Sie einfach einen Spieler aus, indem Sie ein Rechteck um ihn zeichnen. Der KI-Tracker von FieldVision folgt dem Spieler Bild f&uuml;r Bild und legt seine Flugbahn &uuml;ber den exportierten Clip.",
+      "faq-q5": "Kann ich FieldVision vor dem Kauf testen?<span class=\"arrow\">+</span>",
+      "faq-a5": "Ja! Die kostenlose Version ist f&uuml;r immer verf&uuml;gbar, ohne dass eine Kreditkarte erforderlich ist. Sie erhalten sogar 5 KI-Verfolgungsversuche, um den Tracker vor dem Kauf der Pro-Version zu testen.",
+      "faq-q6": "Was passiert, wenn sich mein Jahresabonnement verl&auml;ngert?<span class=\"arrow\">+</span>",
+      "faq-a6": "Sie erhalten vor der Verl&auml;ngerung Ihres Abonnements eine E-Mail-Erinnerung. Sie k&ouml;nnen das Abonnement jederzeit k&uuml;ndigen und die Pro-Version bis zum Ende Ihres Abrechnungszeitraums weiter nutzen.",
+      "cta-title": "Bereit, das Spiel mit anderen Augen zu sehen?",
+      "cta-desc": "Schlie&szlig;en Sie sich Trainern und Analysten an, die FieldVision nutzen, um sich einen Vorteil zu verschaffen. Starten Sie noch heute kostenlos &mdash; keine Kreditkarte erforderlich.",
+      "btn-cta-dl": "&#11015; Kostenlos f&uuml;r Windows herunterladen",
+      "btn-cta-pro": "&#x26A1; Pro erhalten &mdash; &euro;29/Jahr",
+      "nav-features": "Funktionen",
+      "nav-pricing": "Preise",
       "nav-faq": "FAQ"
     }
   };
