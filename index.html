@@ -242,7 +242,9 @@
       letter-spacing: .5px;
       text-transform: uppercase;
     }
-    .hero-badge span {
+    
+    /* CORREÃ‡ÃƒO DO SELETOR: Apenas formata o elemento do pulso pelo ID */
+    .hero-badge #hero-pulse {
       width: 6px;
       height: 6px;
       border-radius: 50%;
@@ -641,7 +643,7 @@
   const translations = {
     pt: {
       "nav-get-pro": "Obter Pro",
-      "hero-badge": "J&aacute; dispon&iacute;vel para Windows",
+      "hero-badge": "J&acute; dispon&iacute;vel para Windows",
       "hero-title": "Analise a sua equipa.<br/><span class=\"accent\">Ven&ccedil;a no campo.</span>",
       "hero-sub": "An&aacute;lise de v&iacute;deo profissional para futebol, rugby, h&oacute;quei e mais. Anote t&aacute;ticas, rastreie jogadores automaticamente e exporte clips incr&iacute;veis &mdash; tudo a partir do seu computador.",
       "cta-label": "ðŸ–¥ Aplica&ccedil;&atilde;o Windows &mdash; Download Gr&aacute;tis",
@@ -890,14 +892,14 @@
       "faq-a1": "FieldVision funciona actualmente en Windows 10 y 11. El soporte para macOS est&aacute; planeado para una versi&oacute;n futura.",
       "faq-q2": "&iquest;Necesito conexi&oacute;n a internet para usar FieldVision?<span class=\"arrow\">+</span>",
       "faq-a2": "No. FieldVision es 100% offline. Tus v&iacute;deos y anotaciones nunca salen de tu ordenador. Internet solo es necesario para validar la clave Pro.",
-      "faq-q3": "&iquest;Qu&eacute; formatos de v&iacute;deo son compatibles?<span class=\"arrow\">+</span>",
+      "faq-q3": "&iquest;QuÃ© formatos de v&iacute;deo son compatibles?<span class=\"arrow\">+</span>",
       "faq-a3": "Soporta MP4, MKV, AVI, MOV, WMV, FLV, WebM, M4V, MPEG, MPG, 3GP, TS y muchos otros.",
       "faq-q4": "&iquest;C&oacute;mo funciona el rastreo autom&aacute;tico de jugadores?<span class=\"arrow\">+</span>",
       "faq-a4": "Basta con seleccionar un jugador dibujando una caja a su alrededor. El rastreador de IA sigue al jugador frame a frame y dibuja el rastro en el v&iacute;deo final.",
       "faq-q5": "&iquest;Puedo probar antes de comprar?<span class=\"arrow\">+</span>",
       "faq-a5": "&iexcl;S&iacute;! La versi&oacute;n Free es gratis para siempre. Tienes adem&aacute;s derecho a 5 usos de prueba del rastreador de IA para ver su potencial antes de comprar.",
-      "faq-q6": "&iquest;Qu&eacute; pasa cuando se renueva mi suscripci&oacute;n?<span class=\"arrow\">+</span>",
-      "faq-a6": "Recibir&aacute;s un aviso por correo antes de la renovaciÃ³n. Puedes cancelar la suscripci&oacute;n en cualquier momento y seguir usando el Pro hasta el final del periodo pagado.",
+      "faq-q6": "&iquest;QuÃ© pasa cuando se renueva mi suscripciÃ³n?<span class=\"arrow\">+</span>",
+      "faq-a6": "Recibir&aacute;s un aviso por correo antes de la renovaciÃ³n. Puedes cancelar la suscripciÃ³n en cualquier momento y seguir usando el Pro hasta el final del periodo pagado.",
       "cta-title": "&iquest;Listo para ver el juego de otra forma?",
       "cta-desc": "&Uacute;nete a los entrenadores y analistas que usan FieldVision para ganar ventaja. Empieza gratis hoy &mdash; sin necesidad de tarjeta.",
       "btn-cta-dl": "Descarga Gratis para Windows",
@@ -924,11 +926,7 @@
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (translations[lang] && translations[lang][key]) {
-        if (key === 'hero-badge') {
-          el.innerHTML = '<span></span> ' + translations[lang][key];
-        } else {
-          el.innerHTML = translations[lang][key];
-        }
+        el.innerHTML = translations[lang][key];
       }
     });
 
