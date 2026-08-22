@@ -472,21 +472,14 @@
       .nav-cta { font-size: 0.78rem; padding: 5px 12px; }
     }
     /* ── DEMO / EXAMPLES ── */
-    #demo { background: #ffffff; }
-    .demo-container { display: grid; grid-template-columns: 1.6fr 1fr; gap: 3rem; width: 100%; max-width: 1200px; margin-top: 1rem; }
-    .demo-player-wrapper { background: #000000; border-radius: 18px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08); border: 1px solid var(--border); aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; }
-    .demo-player-wrapper video { width: 100%; height: 100%; object-fit: contain; display: block; }
-    .demo-selector { display: flex; flex-direction: column; gap: 1rem; justify-content: center; }
-    .demo-btn { background: #ffffff; border: 1px solid var(--border); border-radius: 14px; padding: 1.25rem; text-align: left; cursor: pointer; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1); display: flex; flex-direction: column; gap: 0.5rem; }
-    .demo-btn:hover { border-color: var(--red); transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.03); }
+    #demo { background: #ffffff; display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .demo-container { display: flex; flex-direction: column; align-items: center; gap: 1.8rem; width: 100%; max-width: 900px; margin-top: 1rem; }
+    .demo-selector { display: flex; flex-direction: row; gap: 0.75rem; justify-content: center; flex-wrap: wrap; width: 100%; }
+    .demo-btn { background: #ffffff; border: 1px solid var(--border); border-radius: 100px; padding: 0.65rem 1.5rem; text-align: center; cursor: pointer; transition: all 0.22s ease; font-weight: 700; font-size: 0.95rem; color: var(--text-muted); font-family: 'Outfit', sans-serif; }
+    .demo-btn:hover { border-color: var(--red); transform: translateY(-1px); }
     .demo-btn.active { background: var(--text-main); border-color: var(--text-main); color: #ffffff; }
-    .demo-btn .clip-title { font-weight: 800; font-size: 1.1rem; letter-spacing: -0.5px; }
-    .demo-btn .clip-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.4; }
-    .demo-btn.active .clip-desc { color: rgba(255, 255, 255, 0.7); }
-    @media(max-width: 900px) {
-      .demo-container { grid-template-columns: 1fr; gap: 2rem; }
-      .demo-selector { gap: 0.75rem; }
-    }
+    .demo-player-wrapper { background: #000000; border-radius: 18px; overflow: hidden; box-shadow: 0 20px 45px rgba(0,0,0,0.08); border: 1px solid var(--border); width: 100%; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; }
+    .demo-player-wrapper video { width: 100%; height: 100%; object-fit: contain; display: block; }
 
   </style>
 </head>
@@ -547,6 +540,31 @@
   </div>
 </section>
 
+<section id="demo">
+  <h2 data-i18n="demo-title">Demonstração das Funcionalidades Pro</h2>
+  <p class="section-sub" data-i18n="demo-sub">Veja exemplos reais do que podes obter com a versão paga do FieldVision.</p>
+  
+  <div class="demo-container">
+    <div class="demo-selector">
+      <button class="demo-btn active" onclick="playDemo('videos/benfica_porto.mp4', this)" data-i18n="demo-clip1-btn">
+        Benfica 2-0 Porto
+      </button>
+      <button class="demo-btn" onclick="playDemo('videos/betis_barca_1.mp4', this)" data-i18n="demo-clip2-btn">
+        Betis vs Barcelona (Clip 1)
+      </button>
+      <button class="demo-btn" onclick="playDemo('videos/betis_barca_2.mp4', this)" data-i18n="demo-clip3-btn">
+        Betis vs Barcelona (Clip 2)
+      </button>
+    </div>
+    <div class="demo-player-wrapper">
+      <video id="demo-player" autoplay muted loop playsinline controls poster="logo.png">
+        <source src="videos/benfica_porto.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</section>
+
 <div class="sports-bar">
   <span data-i18n="sports-football">&#x26BD; Football</span>
   <span data-i18n="sports-rugby">&#x1F3C9; Rugby</span>
@@ -567,35 +585,6 @@
     <div class="feature-card"><div class="feature-icon">&#x1F4BE;</div><h3 data-i18n="feat-save-t">Project Save &amp; Load</h3><p data-i18n="feat-save-d">Save your annotations per video. Come back later and pick up exactly where you left off. All data stored locally on your machine.</p></div>
     <div class="feature-card"><div class="feature-icon">&#x1F512;</div><h3 data-i18n="feat-offline-t">100% Offline &amp; Private</h3><p data-i18n="feat-offline-d">Your match footage never leaves your computer. No cloud uploads, no subscriptions to external servers. Your data stays yours.</p></div>
     <div class="feature-card"><div class="feature-icon">&#x1F5A5;&#xFE0F;</div><h3 data-i18n="feat-perf-t">Desktop Native Performance</h3><p data-i18n="feat-perf-d">Built for native Windows performance. Supports MP4, MKV, AVI, MOV and more. No browser lag, no limits.</p></div>
-  </div>
-</section>
-
-<section id="demo">
-  <div class="section-label" data-i18n="demo-label">Examples in Action</div>
-  <h2 data-i18n="demo-title">See FieldVision in action.</h2>
-  <p class="section-sub" data-i18n="demo-sub">Explore actual video clips analyzed and exported using FieldVision, showcasing tactical annotations and automatic tracking.</p>
-  
-  <div class="demo-container">
-    <div class="demo-player-wrapper">
-      <video id="demo-player" controls poster="logo.png">
-        <source src="videos/benfica_porto.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <div class="demo-selector">
-      <button class="demo-btn active" onclick="playDemo('videos/benfica_porto.mp4', this)" data-i18n="demo-clip1-btn">
-        <span class="clip-title">Benfica 2-0 Porto</span>
-        <span class="clip-desc">Tactical annotations showing team positioning and formations.</span>
-      </button>
-      <button class="demo-btn" onclick="playDemo('videos/betis_barca_1.mp4', this)" data-i18n="demo-clip2-btn">
-        <span class="clip-title">Betis vs Barcelona (Clip 1)</span>
-        <span class="clip-desc">Automatic AI player tracking and movement paths.</span>
-      </button>
-      <button class="demo-btn" onclick="playDemo('videos/betis_barca_2.mp4', this)" data-i18n="demo-clip3-btn">
-        <span class="clip-title">Betis vs Barcelona (Clip 2)</span>
-        <span class="clip-desc">Highlighting defensive structure and pressing triggers.</span>
-      </button>
-    </div>
   </div>
 </section>
 
@@ -789,12 +778,11 @@
       "nav-pricing": "Pre&ccedil;os",
       "nav-faq": "FAQ",
       "nav-demo": "Exemplos",
-      "demo-label": "Exemplos em A&ccedil;&atilde;o",
-      "demo-title": "V&ecirc; o FieldVision em A&ccedil;&atilde;o",
-      "demo-sub": "Explora clipes de v&iacute;deo reais analisados e exportados com o FieldVision, demonstrando anota&ccedil;&otilde;es t&aacute;ticas e rastreamento autom&aacute;tico.",
-      "demo-clip1-btn": "<span class=\"clip-title\">Benfica 2-0 Porto</span><span class=\"clip-desc\">Anota&ccedil;&otilde;es t&aacute;ticas que mostram o posicionamento e forma&ccedil;&otilde;es das equipas.</span>",
-      "demo-clip2-btn": "<span class=\"clip-title\">Betis vs Barcelona (Clip 1)</span><span class=\"clip-desc\">Rastreamento autom&aacute;tico de jogadores com IA e linhas de trajet&oacute;ria.</span>",
-      "demo-clip3-btn": "<span class=\"clip-title\">Betis vs Barcelona (Clip 2)</span><span class=\"clip-desc\">Destaque da estrutura defensiva e momentos de press&atilde;o.</span>"
+      "demo-title": "Demonstra&ccedil;&atilde;o das Funcionalidades Pro",
+      "demo-sub": "Veja exemplos reais do que podes obter com a vers&atilde;o paga do FieldVision.",
+      "demo-clip1-btn": "Benfica 2-0 Porto",
+      "demo-clip2-btn": "Betis vs Barcelona (Clip 1)",
+      "demo-clip3-btn": "Betis vs Barcelona (Clip 2)"
     },
     en: {
       "nav-get-pro": "Get Pro",
@@ -885,12 +873,11 @@
       "nav-pricing": "Pricing",
       "nav-faq": "FAQ",
       "nav-demo": "Examples",
-      "demo-label": "Examples in Action",
-      "demo-title": "See FieldVision in Action",
-      "demo-sub": "Explore actual video clips analyzed and exported using FieldVision, showcasing tactical annotations and automatic tracking.",
-      "demo-clip1-btn": "<span class=\"clip-title\">Benfica 2-0 Porto</span><span class=\"clip-desc\">Tactical annotations showing team positioning and formations.</span>",
-      "demo-clip2-btn": "<span class=\"clip-title\">Betis vs Barcelona (Clip 1)</span><span class=\"clip-desc\">Automatic AI player tracking and movement paths.</span>",
-      "demo-clip3-btn": "<span class=\"clip-title\">Betis vs Barcelona (Clip 2)</span><span class=\"clip-desc\">Highlighting defensive structure and pressing triggers.</span>"
+      "demo-title": "Pro Features Demonstration",
+      "demo-sub": "See real examples of what you can achieve with the paid version of FieldVision.",
+      "demo-clip1-btn": "Benfica 2-0 Porto",
+      "demo-clip2-btn": "Betis vs Barcelona (Clip 1)",
+      "demo-clip3-btn": "Betis vs Barcelona (Clip 2)"
     },
     es: {
       "nav-get-pro": "Obtener Pro",
@@ -981,12 +968,11 @@
       "nav-pricing": "Precios",
       "nav-faq": "FAQ",
       "nav-demo": "Ejemplos",
-      "demo-label": "Ejemplos en Acci&oacute;n",
-      "demo-title": "Ver FieldVision en Acci&oacute;n",
-      "demo-sub": "Explore videoclips reales analizados y exportados con FieldVision, que muestran anotaciones t&aacute;cticas y seguimiento autom&aacute;tico.",
-      "demo-clip1-btn": "<span class=\"clip-title\">Benfica 2-0 Porto</span><span class=\"clip-desc\">Anotaciones t&aacute;cticas que muestran el posicionamiento y las formaciones de los equipos.</span>",
-      "demo-clip2-btn": "<span class=\"clip-title\">Betis vs Barcelona (Clip 1)</span><span class=\"clip-desc\">Seguimiento autom&aacute;tico de jugadores con IA y l&iacute;neas de trayectoria.</span>",
-      "demo-clip3-btn": "<span class=\"clip-title\">Betis vs Barcelona (Clip 2)</span><span class=\"clip-desc\">Destacando la estructura defensiva y los momentos de presi&oacute;n.</span>"
+      "demo-title": "Demostraci&oacute;n de Funciones Pro",
+      "demo-sub": "Vea ejemplos reales de lo que puede lograr con la versi&oacute;n paga de FieldVision.",
+      "demo-clip1-btn": "Benfica 2-0 Porto",
+      "demo-clip2-btn": "Betis vs Barcelona (Clip 1)",
+      "demo-clip3-btn": "Betis vs Barcelona (Clip 2)"
     },
     fr: {
       "nav-get-pro": "Obtenir Pro",
@@ -1077,12 +1063,11 @@
       "nav-pricing": "Tarifs",
       "nav-faq": "FAQ",
       "nav-demo": "Exemples",
-      "demo-label": "Exemples en Action",
-      "demo-title": "Voir FieldVision en Action",
-      "demo-sub": "Explorez des clips vido rels analyss et exports avec FieldVision, prsentant des annotations tactiques et le suivi automatique.",
-      "demo-clip1-btn": "<span class=\"clip-title\">Benfica 2-0 Porto</span><span class=\"clip-desc\">Annotations tactiques montrant le positionnement et les formations des &eacute;quipes.</span>",
-      "demo-clip2-btn": "<span class=\"clip-title\">Betis vs Barcelona (Clip 1)</span><span class=\"clip-desc\">Suivi automatique des joueurs par IA et lignes de trajectoire.</span>",
-      "demo-clip3-btn": "<span class=\"clip-title\">Betis vs Barcelona (Clip 2)</span><span class=\"clip-desc\">Mise en &eacute;vidence de la structure d&eacute;fensive et des d&eacute;clencheurs de pressing.</span>"
+      "demo-title": "D&eacute;monstration des Fonctionnalit&eacute;s Pro",
+      "demo-sub": "D&eacute;couvrez des exemples concrets de ce que vous pouvez r&eacute;aliser avec la version payante de FieldVision.",
+      "demo-clip1-btn": "Benfica 2-0 Porto",
+      "demo-clip2-btn": "Betis vs Barcelona (Clip 1)",
+      "demo-clip3-btn": "Betis vs Barcelona (Clip 2)"
     },
     de: {
       "nav-get-pro": "Pro erhalten",
@@ -1173,12 +1158,11 @@
       "nav-pricing": "Preise",
       "nav-faq": "FAQ",
       "nav-demo": "Beispiele",
-      "demo-label": "Beispiele in Aktion",
-      "demo-title": "FieldVision in Aktion sehen",
-      "demo-sub": "Erkunden Sie echte Videoclips, die mit FieldVision analysiert und exportiert wurden und taktische Annotationen sowie automatisches Tracking zeigen.",
-      "demo-clip1-btn": "<span class=\"clip-title\">Benfica 2-0 Porto</span><span class=\"clip-desc\">Taktische Annotationen zur Darstellung von Team-Positionierung und Formationen.</span>",
-      "demo-clip2-btn": "<span class=\"clip-title\">Betis vs Barcelona (Clip 1)</span><span class=\"clip-desc\">Automatisches KI-Spieler-Tracking und Bewegungspfade.</span>",
-      "demo-clip3-btn": "<span class=\"clip-title\">Betis vs Barcelona (Clip 2)</span><span class=\"clip-desc\">Hervorhebung der Defensivstruktur und der Pressingausl&ouml;ser.</span>"
+      "demo-title": "Demonstration der Pro-Funktionen",
+      "demo-sub": "Sehen Sie reale Beispiele daf&uuml;r, was Sie mit der kostenpflichtigen Version von FieldVision erreichen k&ouml;nnen.",
+      "demo-clip1-btn": "Benfica 2-0 Porto",
+      "demo-clip2-btn": "Betis vs Barcelona (Clip 1)",
+      "demo-clip3-btn": "Betis vs Barcelona (Clip 2)"
     }
   };
 
