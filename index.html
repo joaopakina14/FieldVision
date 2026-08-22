@@ -473,11 +473,7 @@
     }
     /* ── DEMO / EXAMPLES ── */
     #demo { background: #ffffff; display: flex; flex-direction: column; align-items: center; text-align: center; }
-    .demo-container { display: flex; flex-direction: column; align-items: center; gap: 1.8rem; width: 100%; max-width: 900px; margin-top: 1rem; }
-    .demo-selector { display: flex; flex-direction: row; gap: 0.75rem; justify-content: center; flex-wrap: wrap; width: 100%; }
-    .demo-btn { background: #ffffff; border: 1px solid var(--border); border-radius: 100px; padding: 0.65rem 1.5rem; text-align: center; cursor: pointer; transition: all 0.22s ease; font-weight: 700; font-size: 0.95rem; color: var(--text-muted); font-family: 'Outfit', sans-serif; }
-    .demo-btn:hover { border-color: var(--red); transform: translateY(-1px); }
-    .demo-btn.active { background: var(--text-main); border-color: var(--text-main); color: #ffffff; }
+    .demo-container { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 900px; margin-top: 1rem; }
     .demo-player-wrapper { background: #000000; border-radius: 18px; overflow: hidden; box-shadow: 0 20px 45px rgba(0,0,0,0.08); border: 1px solid var(--border); width: 100%; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; }
     .demo-player-wrapper video { width: 100%; height: 100%; object-fit: contain; display: block; }
 
@@ -545,19 +541,8 @@
   <p class="section-sub" data-i18n="demo-sub">Veja exemplos reais do que podes obter com a versão paga do FieldVision.</p>
   
   <div class="demo-container">
-    <div class="demo-selector">
-      <button class="demo-btn active" onclick="playDemo('videos/benfica_porto.mp4', this)" data-i18n="demo-clip1-btn">
-        Benfica 2-0 Porto
-      </button>
-      <button class="demo-btn" onclick="playDemo('videos/betis_barca_1.mp4', this)" data-i18n="demo-clip2-btn">
-        Betis vs Barcelona (Clip 1)
-      </button>
-      <button class="demo-btn" onclick="playDemo('videos/betis_barca_2.mp4', this)" data-i18n="demo-clip3-btn">
-        Betis vs Barcelona (Clip 2)
-      </button>
-    </div>
     <div class="demo-player-wrapper">
-      <video id="demo-player" autoplay muted loop playsinline controls poster="logo.png">
+      <video id="demo-player" autoplay muted playsinline controls poster="logo.png">
         <source src="videos/benfica_porto.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -779,10 +764,7 @@
       "nav-faq": "FAQ",
       "nav-demo": "Exemplos",
       "demo-title": "Demonstra&ccedil;&atilde;o das Funcionalidades Pro",
-      "demo-sub": "Veja exemplos reais do que podes obter com a vers&atilde;o paga do FieldVision.",
-      "demo-clip1-btn": "Benfica 2-0 Porto",
-      "demo-clip2-btn": "Betis vs Barcelona (Clip 1)",
-      "demo-clip3-btn": "Betis vs Barcelona (Clip 2)"
+      "demo-sub": "Veja exemplos reais do que podes obter com a vers&atilde;o paga do FieldVision."
     },
     en: {
       "nav-get-pro": "Get Pro",
@@ -874,10 +856,7 @@
       "nav-faq": "FAQ",
       "nav-demo": "Examples",
       "demo-title": "Pro Features Demonstration",
-      "demo-sub": "See real examples of what you can achieve with the paid version of FieldVision.",
-      "demo-clip1-btn": "Benfica 2-0 Porto",
-      "demo-clip2-btn": "Betis vs Barcelona (Clip 1)",
-      "demo-clip3-btn": "Betis vs Barcelona (Clip 2)"
+      "demo-sub": "See real examples of what you can achieve with the paid version of FieldVision."
     },
     es: {
       "nav-get-pro": "Obtener Pro",
@@ -969,10 +948,7 @@
       "nav-faq": "FAQ",
       "nav-demo": "Ejemplos",
       "demo-title": "Demostraci&oacute;n de Funciones Pro",
-      "demo-sub": "Vea ejemplos reales de lo que puede lograr con la versi&oacute;n paga de FieldVision.",
-      "demo-clip1-btn": "Benfica 2-0 Porto",
-      "demo-clip2-btn": "Betis vs Barcelona (Clip 1)",
-      "demo-clip3-btn": "Betis vs Barcelona (Clip 2)"
+      "demo-sub": "Vea ejemplos reales de lo que puede lograr con la versi&oacute;n paga de FieldVision."
     },
     fr: {
       "nav-get-pro": "Obtenir Pro",
@@ -1064,10 +1040,7 @@
       "nav-faq": "FAQ",
       "nav-demo": "Exemples",
       "demo-title": "D&eacute;monstration des Fonctionnalit&eacute;s Pro",
-      "demo-sub": "D&eacute;couvrez des exemples concrets de ce que vous pouvez r&eacute;aliser avec la version payante de FieldVision.",
-      "demo-clip1-btn": "Benfica 2-0 Porto",
-      "demo-clip2-btn": "Betis vs Barcelona (Clip 1)",
-      "demo-clip3-btn": "Betis vs Barcelona (Clip 2)"
+      "demo-sub": "D&eacute;couvrez des exemples concrets de ce que vous pouvez r&eacute;aliser avec la version payante de FieldVision."
     },
     de: {
       "nav-get-pro": "Pro erhalten",
@@ -1159,25 +1132,11 @@
       "nav-faq": "FAQ",
       "nav-demo": "Beispiele",
       "demo-title": "Demonstration der Pro-Funktionen",
-      "demo-sub": "Sehen Sie reale Beispiele daf&uuml;r, was Sie mit der kostenpflichtigen Version von FieldVision erreichen k&ouml;nnen.",
-      "demo-clip1-btn": "Benfica 2-0 Porto",
-      "demo-clip2-btn": "Betis vs Barcelona (Clip 1)",
-      "demo-clip3-btn": "Betis vs Barcelona (Clip 2)"
+      "demo-sub": "Sehen Sie reale Beispiele daf&uuml;r, was Sie mit der kostenpflichtigen Version von FieldVision erreichen k&ouml;nnen."
     }
   };
 
-  // Funcao para controlar a reproducao dos videos de exemplo
-  window.playDemo = function(src, btn) {
-    const player = document.getElementById('demo-player');
-    if (player) {
-      player.src = src;
-      player.play().catch(err => {
-        console.log("Auto-play blocked or error: ", err);
-      });
-    }
-    document.querySelectorAll('.demo-btn').forEach(b => b.classList.remove('active'));
-    if (btn) btn.classList.add('active');
-  }
+
 
   // ── MOTOR DE TRADUÇÃO DINÂMICO ──
   let currentLang = 'pt';
@@ -1217,6 +1176,22 @@
       } else {
         setLang('en');
       }
+    }
+
+    // Configuração de Playlist em Loop Contínuo para os vídeos de demonstração
+    const player = document.getElementById('demo-player');
+    if (player) {
+      const demoVideos = [
+        'videos/benfica_porto.mp4',
+        'videos/betis_barca_1.mp4',
+        'videos/betis_barca_2.mp4'
+      ];
+      let currentVideoIndex = 0;
+      player.addEventListener('ended', () => {
+        currentVideoIndex = (currentVideoIndex + 1) % demoVideos.length;
+        player.src = demoVideos[currentVideoIndex];
+        player.play().catch(err => console.log("Erro ao reproduzir próximo vídeo:", err));
+      });
     }
   });
 
