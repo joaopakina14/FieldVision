@@ -33,15 +33,15 @@
     .nav-dl:hover { background:rgba(0,230,118,0.1); }
     .nav-cta { background:var(--green); color:#000; font-weight:700; font-size:.85rem; padding:.5rem 1.2rem; border-radius:8px; text-decoration:none; transition:background .2s,transform .15s; }
     .nav-cta:hover { background:var(--green-d); transform:translateY(-1px); }
-    .hero { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:120px 5vw 80px; position:relative; overflow:hidden; }
+    .hero { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:90px 5vw 40px; position:relative; overflow:hidden; }
     .hero::before { content:''; position:absolute; top:-200px; left:50%; transform:translateX(-50%); width:900px; height:900px; border-radius:50%; background:radial-gradient(circle,rgba(0,230,118,0.12) 0%,rgba(0,176,255,0.06) 40%,transparent 70%); pointer-events:none; }
     .hero-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(0,230,118,0.1); border:1px solid rgba(0,230,118,0.3); color:var(--green); font-size:.8rem; font-weight:600; padding:.35rem 1rem; border-radius:100px; margin-bottom:1.5rem; letter-spacing:.5px; text-transform:uppercase; }
     .hero-badge span { width:6px; height:6px; border-radius:50%; background:var(--green); display:inline-block; animation:pulse 2s infinite; }
     @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
-    h1 { font-size:clamp(2.8rem,7vw,5.5rem); font-weight:900; line-height:1.05; letter-spacing:-2px; margin-bottom:1.2rem; }
+    h1 { font-size:clamp(2rem,5vw,3.8rem); font-weight:900; line-height:1.05; letter-spacing:-2px; margin-bottom:.8rem; }
     h1 .accent { background:linear-gradient(90deg,var(--green) 0%,var(--blue) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
-    .hero-sub { font-size:clamp(1rem,2vw,1.2rem); color:var(--muted); max-width:580px; margin:0 auto 2.5rem; }
-    .hero-cta-box { display:flex; flex-direction:column; align-items:center; gap:1rem; background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:20px; padding:2rem 2.5rem; margin-bottom:2rem; backdrop-filter:blur(10px); width:100%; max-width:520px; }
+    .hero-sub { font-size:clamp(.9rem,1.5vw,1.05rem); color:var(--muted); max-width:580px; margin:0 auto 1.5rem; }
+    .hero-cta-box { display:flex; flex-direction:column; align-items:center; gap:.75rem; background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:20px; padding:1.25rem 2rem; margin-bottom:1.5rem; backdrop-filter:blur(10px); width:100%; max-width:520px; }
     .hero-cta-box .cta-label { font-size:.8rem; color:var(--muted); text-transform:uppercase; letter-spacing:1px; font-weight:600; }
     .hero-cta-btns { display:flex; gap:1rem; width:100%; flex-wrap:wrap; justify-content:center; }
     .btn-download { flex:1; min-width:180px; background:linear-gradient(135deg,var(--green),var(--blue)); color:#000; font-weight:800; font-size:1rem; padding:1rem 1.5rem; border-radius:12px; text-decoration:none; text-align:center; transition:transform .2s,box-shadow .2s; box-shadow:0 0 30px rgba(0,230,118,0.35); display:flex; align-items:center; justify-content:center; gap:.5rem; }
@@ -50,9 +50,9 @@
     .btn-pro:hover { background:var(--dark4); border-color:rgba(0,230,118,0.3); transform:translateY(-2px); }
     .hero-cta-note { font-size:.78rem; color:var(--muted); }
     .hero-cta-note strong { color:var(--green); }
-    .hero-stats { display:flex; gap:3rem; margin-top:1.5rem; justify-content:center; flex-wrap:wrap; }
+    .hero-stats { display:flex; gap:2rem; margin-top:1rem; justify-content:center; flex-wrap:wrap; }
     .stat { text-align:center; }
-    .stat-num { font-size:2rem; font-weight:900; color:var(--green); }
+    .stat-num { font-size:1.6rem; font-weight:900; color:var(--green); }
     .stat-label { font-size:.8rem; color:var(--muted); text-transform:uppercase; letter-spacing:1px; }
     .sports-bar { background:var(--dark2); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:1.2rem 5vw; display:flex; align-items:center; justify-content:center; gap:3rem; flex-wrap:wrap; }
     .sports-bar span { color:var(--muted); font-size:.85rem; font-weight:500; display:flex; align-items:center; gap:.5rem; }
@@ -275,3 +275,4 @@
 </script>
 </body>
 </html>
+
