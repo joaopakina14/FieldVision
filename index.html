@@ -411,6 +411,29 @@
     .step-num { width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0; background: var(--text-main); color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: .85rem; }
     .step h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: .25rem; }
     .step p { color: var(--text-muted); font-size: .92rem; }
+    
+    /* ── GALLERY ── */
+    .interface-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 1100px;
+      margin-top: 4rem;
+    }
+    .interface-gallery img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      object-fit: cover;
+    }
+    .interface-gallery img:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+    }
 
     /* ── PRICING ── */
     #pricing { background: var(--bg-sec); width: 100%; }
@@ -642,6 +665,12 @@
     <div class="step"><div class="step-num">2</div><div><h3 data-i18n="step-2-t">Load your video</h3><p data-i18n="step-2-d">Open any video file from your computer. Supports all major formats &mdash; MP4, MKV, AVI, MOV and more.</p></div></div>
     <div class="step"><div class="step-num">3</div><div><h3 data-i18n="step-3-t">Annotate &amp; Track</h3><p data-i18n="step-3-d">Pause the video, draw your tactical annotations, or select a player to track automatically with AI.</p></div></div>
     <div class="step"><div class="step-num">4</div><div><h3 data-i18n="step-4-t">Export your clip</h3><p data-i18n="step-4-d">Trim the moment you want, export with annotations burned in. Ready to share with your team instantly.</p></div></div>
+  </div>
+
+  <div class="interface-gallery">
+    <img src="img/inter1.png" alt="FieldVision Interface Example 1" />
+    <img src="img/inter2.png" alt="FieldVision Interface Example 2" />
+    <img src="img/inter3.png" alt="FieldVision Interface Example 3" />
   </div>
 </section>
 
