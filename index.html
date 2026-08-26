@@ -592,6 +592,14 @@
       margin-left: auto;
       margin-right: auto;
     }
+    .smartscreen-notice img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin-top: 1rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
   </style>
 </head>
 <body>
@@ -672,8 +680,11 @@
       </video>
     </div>
     
-    <div class="smartscreen-notice" data-i18n="smartscreen-notice">
-      💡 <strong>Nota para utilizadores Windows:</strong> Como o FieldVision é uma aplicação nova, o Windows SmartScreen poderá mostrar um aviso. Não te preocupes, isto é normal: basta clicares em <strong>"Mais informações"</strong> e depois em <strong>"Executar assim mesmo"</strong> para instalar.
+    <div class="smartscreen-notice">
+      <div data-i18n="smartscreen-notice">
+        💡 <strong>Nota para utilizadores Windows:</strong> Como o FieldVision é uma aplicação nova, o Windows SmartScreen poderá mostrar um aviso. Não te preocupes, isto é normal: basta clicares em <strong>"Mais informações"</strong> e depois em <strong>"Executar assim mesmo"</strong> para instalar.
+      </div>
+      <img src="img/windowsDefender.png" alt="Windows SmartScreen Notice">
     </div>
   </div>
 </section>
